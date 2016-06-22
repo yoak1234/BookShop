@@ -82,6 +82,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ShoppingEntity.edmx</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>ShoppingEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>ShoppingEntity.tt</DependentUpon>
     </Compile>

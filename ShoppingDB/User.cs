@@ -26,6 +26,7 @@ namespace ShoppingDB
         public string Address { get; set; }
         public System.DateTime BirthDay { get; set; }
         public string ZipCode { get; set; }
+        public string Gender { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }

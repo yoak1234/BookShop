@@ -5,12 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="d44cc59b1978404ba23f98476c3b7a13" Name="Diagram1" ZoomLevel="99">
-        <EntityTypeShape EntityType="ShoppingModel.Category" Width="1.5" PointX="0.5" PointY="0.5" />
-        <EntityTypeShape EntityType="ShoppingModel.Order" Width="1.5" PointX="7.375" PointY="4.5" />
-        <EntityTypeShape EntityType="ShoppingModel.OrderDetail" Width="1.5" PointX="9.75" PointY="2.875" />
-        <EntityTypeShape EntityType="ShoppingModel.Product" Width="1.5" PointX="2.75" PointY="0.5" />
-        <EntityTypeShape EntityType="ShoppingModel.ShoppingCart" Width="1.5" PointX="5.125" PointY="0.5" />
-        <EntityTypeShape EntityType="ShoppingModel.User" Width="1.5" PointX="5" PointY="4.5" />
+        <EntityTypeShape EntityType="ShoppingModel.Category" Width="1.5" PointX="0.75" PointY="3.625" />
+        <EntityTypeShape EntityType="ShoppingModel.Order" Width="1.5" PointX="6" PointY="9.5" />
+        <EntityTypeShape EntityType="ShoppingModel.OrderDetail" Width="1.5" PointX="8.25" PointY="2.75" />
+        <EntityTypeShape EntityType="ShoppingModel.Product" Width="1.5" PointX="3" PointY="2.375" />
+        <EntityTypeShape EntityType="ShoppingModel.ShoppingCart" Width="1.5" PointX="5.25" PointY="3.25" />
+        <EntityTypeShape EntityType="ShoppingModel.sysdiagram" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="ShoppingModel.User" Width="1.5" PointX="3.75" PointY="9.25" />
         <AssociationConnector Association="ShoppingModel.FK_Product_Category" />
         <AssociationConnector Association="ShoppingModel.FK_Order_User1" />
         <AssociationConnector Association="ShoppingModel.FK_OrderDetail_Order" />
