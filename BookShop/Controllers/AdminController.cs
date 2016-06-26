@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookShop.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +17,18 @@ namespace BookShop.Controllers
         public ActionResult _Menu()
         {
             return PartialView();
+        }
+
+        public ActionResult AddProducts()
+        {
+            return View(new AddProductViewModel());
+        }
+
+        [HttpPost]
+        public ActionResult AddProducts(AddProductViewModel model)
+        {
+            
+            return View("Index");
         }
     }
 }

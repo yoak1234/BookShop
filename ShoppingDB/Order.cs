@@ -21,7 +21,7 @@ namespace ShoppingDB
         }
     
         public int Id { get; set; }
-        public System.DateTime TimeStamp { get; set; }
+        public System.DateTime CreatedAt { get; set; }
         public int UserId { get; set; }
     
         public virtual User User { get; set; }

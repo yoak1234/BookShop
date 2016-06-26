@@ -30,11 +30,12 @@ namespace ShoppingDB
         public double Price { get; set; }
         public string Isbn { get; set; }
         public int CategoryId { get; set; }
-        public string CreateBy { get; set; }
+        public int CreateBy { get; set; }
         public Nullable<System.DateTime> CreateAt { get; set; }
-        public string UpdateBy { get; set; }
+        public int UpdateBy { get; set; }
         public System.DateTime UpdateAt { get; set; }
-        public int IsActive { get; set; }
+        public bool IsActive { get; set; }
+        public bool IsRecommend { get; set; }
     
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

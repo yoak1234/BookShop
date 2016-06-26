@@ -50,6 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs">
+      <DependentUpon>ShoppingEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Category.cs">
       <DependentUpon>ShoppingEntity.tt</DependentUpon>
     </Compile>

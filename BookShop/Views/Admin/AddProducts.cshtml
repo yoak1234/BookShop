@@ -1,0 +1,57 @@
+﻿@model BookShop.Models.AddProductViewModel
+@{
+    ViewBag.Title = "AddProducts";
+}
+<h2>Add Products</h2>
+<hr />
+@using (Html.BeginForm("AddProducts", "Admin", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="row">
+        <div class="col-md-4">
+            @Html.LabelFor(m => m.CategoryId)
+            @Html.TextBoxFor(m => m.CategoryId, new { @class = "form-control", type = "number" })
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(m => m.Title)
+            @Html.TextBoxFor(m => m.Title, new { @class = "form-control" })
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(m => m.Author)
+            @Html.TextBoxFor(m => m.Author, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            @Html.LabelFor(m => m.Isbn)
+            @Html.TextBoxFor(m => m.Isbn, new { @class = "form-control", @type = "number" })
+        </div>
+
+        <div class="col-md-4">
+            @Html.LabelFor(m => m.Balance)
+            @Html.TextBoxFor(m => m.Balance, new { @class = "form-control", @type = "number" })
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(m => m.Price)
+            @Html.TextBoxFor(m => m.Price, new { @class = "form-control", @type = "number" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            @Html.LabelFor(m => m.ImageUpload)
+            @Html.TextBoxFor(m => m.ImageUpload, new { type = "file" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            @Html.LabelFor(m => m.Detail)
+            @Html.TextAreaFor(m => m.Detail, new { @class = "form-control", rows = "10", style = "max-width: none;" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" style="margin-top: 10px;">
+            <button type="submit" class="btn btn-success" style="float: right;">Submit</button>
+        </div>
+    </div>
+}
+
+
