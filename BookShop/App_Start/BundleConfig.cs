@@ -26,11 +26,6 @@ namespace BookShop
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
-
-            bundles.Add(new StyleBundle("~/Content/bootstrap-admin/dist/css").Include(
-                      "~/Content/bootstrap-admin/dist/css/sb-admin-2.css"));
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap-admin").Include(
-                      "~/Content/bootstrap-admin/dist/js/sb-admin-2.js"));
         }
     }
 }

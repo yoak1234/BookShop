@@ -1,6 +1,6 @@
 ﻿@{
-    string controllerName = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-    string actionName = HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString();
+    string controllerName = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString().ToLower();
+    string actionName = HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString().ToLower();
 }
 <!DOCTYPE html>
 <html>
@@ -10,12 +10,12 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    @if (controllerName == "Admin")
-    {
-        @Styles.Render("~/Content/bootstrap-admin/dist/css")
-        @Scripts.Render("~/bundles/bootstrap-admin")
+</head>
+<style>
+    body {
+        margin-top: 10px;
     }
-    </head>
+</style>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -25,23 +25,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+                @Html.ActionLink("Book Shop", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
         </div>
     </div>
     <div class="container body-content">
+        <div class="col-md-3">
+            @if (controllerName == "admin")
+            {
+                @Html.Action("_Menu", "Admin")
+            }
+        </div>
         @RenderBody()
-        <hr />
+    </div>
+    <div class="container">
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <hr />
+            <p>&copy; @DateTime.Now.Year - GreenStone Book Shop</p>
         </footer>
     </div>
 
